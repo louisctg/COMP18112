@@ -1,0 +1,165 @@
+
+
+mbyxalt2-) curl http://localhost:8000/index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <!---------- Website Information ---------->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="description" content="About Me">
+    <meta name="keywords" content="about/student/manchester">
+    <meta name="author" content="Louis Thurston-Gibson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="info.html">Website Infromation</a>
+  </head>
+  <body>
+    <h1>Louis Thurston-Gibson</h1>
+    <h1>About me</h1>
+    <img src="images/profile.jpg" alt="Profile Picture" height="150px" class="profile">
+    <h2>My name is Louis Thurston-Gibson, I am a first year undergraduate strudying BSc Computer Science at the University of Manchester</h2>
+    <p>
+    From Upholland,Lancashire
+    </p>
+    </body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------
+
+mbyxalt2-) telnet localhost 8000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+HELLO
+<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 400.
+<p>Message: Bad request syntax ('HELLO').
+<p>Error code explanation: 400 = Bad request syntax or unsupported method.
+</body>
+Connection closed by foreign host.
+
+-------------------------------------------------------------------------------------------------------------
+
+mbyxalt2-) telnet localhost 8000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+^]
+
+telnet> quit
+Connection closed.
+mbyxalt2-) telnet localhost 8000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+GET /
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!---------- Website Information ---------->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="description" content="About Me">
+    <meta name="keywords" content="about/student/manchester">
+    <meta name="author" content="Louis Thurston-Gibson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="info.html">Website Infromation</a>
+  </head>
+  <body>
+    <h1>Louis Thurston-Gibson</h1>
+    <h1>About me</h1>
+    <img src="images/profile.jpg" alt="Profile Picture" height="150px" class="profile">
+    <h2>My name is Louis Thurston-Gibson, I am a first year undergraduate strudying BSc Computer Science at the University of Manchester</h2>
+    <p>
+    From Upholland,Lancashire
+    </p>
+    </body>
+</html>
+Connection closed by foreign host.
+
+-------------------------------------------------------------------------------------------------------------
+
+mbyxalt2-) telnet localhost 8000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+GET /courses.html
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!---------- Website Information ---------->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="description" content="About Me">
+    <meta name="keywords" content="about/student/manchester">
+    <meta name="author" content="Louis Thurston-Gibson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="info.html">Website Infromation</a>
+  </head>
+  <body>
+ <h1>Courses</h1>
+<h2>COMP11120</h2>
+<h2>This unit is the mathematics unit that covers both semesters and teaches us the most vital maths that we will need in computer science.</h2>
+
+<h2>What I most like about the course</h2>
+<h3>These are the three things that I like most about the course:</h3>
+
+<ul>
+<li>We are taught formal definitions of mathematical concepts which will help us to understand more of mathematics and gives us a broader understanding.</li>
+<li>The material is very useful in computer science.</li>
+<li>The lecture notes are very detailed and have plenty of examples</li>
+</ul>
+
+<h2>What I least like about the course</h2>
+<h3>These are the three things that I like least about the course:</h3>
+
+<ul>
+<li>The time given in examples classes is very short and often doesn't give us much time with the TA.</li>
+<li>The lecture often don't cover enough and often draw out one exercise.</li>
+<li>The mathematics is possible the most difficult that I have come across and is sometimes quite difficult to understand.</li>
+</ul>
+
+<h2>COMP16121</h2>
+
+<h2>This is the Object-Oriented Programming course which uses Java to teach us the basics of writing good programs.</h2>
+
+<h2>What I most like about the course</h2>
+<h3>These are the three things that I like most about the course:</h3>
+
+<ul>
+<li>It covers everything from the basics.</li>
+<li>Whilst using Java the course aims to teach us programming in general.</li>
+<li>The lecturer John Latham is very engaging which make the lectures worth attending.</li>
+</ul>
+
+<h2>What I least like about the course</h2>
+<h3>These are the three things that I like least about the course:</h3>
+
+<ul>
+<li>Some of the material if not all is concepts I have covered before.</li>
+<li>The logbook makes exercises very tedious, and although it gets us into good practises it increases the time taken to complete even the most simple exercise.</li>
+<li>The exercises sometimes are quite easy and might be better challenging us a bit more.</li>
+</ul>
+</html>
+Connection closed by foreign host.
+
