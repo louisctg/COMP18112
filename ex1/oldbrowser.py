@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import urllib
-import sys
 
 def checkInputInt(userinput):
 	try:
@@ -66,8 +65,6 @@ def openPage(webpage):
 		numberOfLinks +=1
 	
 	linkChosen = raw_input('Enter number of link: ')
-	if linkChosen == 'quit':
-		sys.exit()
 	while linkChosen.isdigit() == False or int(linkChosen) >= numberOfLinks or int(linkChosen) <= 0:
 		linkChosen = raw_input('Not a link, enter number of link: ')
 	if linksInPage[int(linkChosen) -1].startswith('.'):
