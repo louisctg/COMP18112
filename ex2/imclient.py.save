@@ -1,0 +1,12 @@
+import im
+server= im.IMServerProxy(’http://webdev.cs.manchester.ac.uk/˜username/IMServer.php’)
+
+if server['userConnected'] = 'TRUE':
+  myUserNumber = User2;
+else
+  myUserNumber = User1;
+
+def writeMessage():
+  server[myUserNumber] = raw_input('Type Message:')
+  server['chat'] = server['chat'] + server[myUserNumber]
+

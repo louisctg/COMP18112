@@ -1,0 +1,33 @@
+import im
+import time
+import sys
+
+server = im.IMServerProxy('http://webdev.cs.manchester.ac.uk/~mbyxalt2/IMServer.php')
+
+if server['chatActive'].strip(' \t\n\r') == 'yes':
+  userNumber = 'two'
+  server['userTyping'] = 'one'
+  otherUser = 'one'
+else:
+  userNumber = 'one'
+  otherUser = 'two'
+
+server['chatActive'] = 'yes'
+
+while server['chatActive'].strip(' \t\n\r') == 'yes':
+  if server['userTyping'].strip(' \t\n\r') == userNumber:
+    try:
+      server['currentMessageOf' + userNumber] = raw_input("Type a message: ")
+    except (EOFError, KeyboardInterrupt):
+      print 'Exiting Chat!'
+      server.clear()
+      sys.exit(0)
+    server['userTyping'] = otherUser
+  else:
+    while server['currentMessageOf' + otherUser].strip(' \t\n\r') == '':
+      time.sleep(1)
+    print server['currentMessageOf' + otherUser].strip(' \t\n\r')
+    server['currentMessageOf' + otherUser] == ''
+
+
+server.clear()
