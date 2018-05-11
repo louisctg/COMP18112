@@ -119,8 +119,11 @@ class MyServer(Server):
         return True
 
     def onDisconnect(self, socket):
-        print socket.screenName + " has disconnected from the server."
-        del usersOnServer[socket.screenName]
+        if socket.screenName == None:
+            print "User has been disconnected without registering."
+        else:
+            print socket.screenName + " has disconnected from the server."
+            del usersOnServer[socket.screenName]
         global numberOfUsers
         numberOfUsers -= 1
         print "There are " + str(numberOfUsers) + " users connected"

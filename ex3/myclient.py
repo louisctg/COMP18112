@@ -21,21 +21,19 @@ class IRCClient(Client):
 
 			text_len = len(readline.get_line_buffer()) + 2 		# Room for line buffe and '> '
 
-			# ANSI escape sequences (All VT100 except ESC[0G)
 			sys.stdout.write('\x1b[2K')                         # <ESC> Delete current line
 			sys.stdout.write('\x1b[1A\x1b[2K'*(text_len/cols))  # <ESC> Move cursor up
 																# <ESC> Delete current line
-			sys.stdout.write('\x1b[0G')                         # <ESC. Move to start of line
+			sys.stdout.write('\x1b[0G')                         # <ESC> Move to start of line
 			print message
 			sys.stdout.write('> ' + readline.get_line_buffer())
 			sys.stdout.flush()
 		else:
 
-			# ANSI escape sequences (All VT100 except ESC[0G)
 			sys.stdout.write('\x1b[2K')                         # <ESC> Delete current line
 			sys.stdout.write('\x1b[1A\x1b[2K')  				# <ESC> Move cursor up
 																# <ESC> Delete current line
-			sys.stdout.write('\x1b[0G')                         # <ESC. Move to start of line
+			sys.stdout.write('\x1b[0G')                         # <ESC> Move to start of line
 			sys.stdout.flush()
 			message.replace(screenName, "you", 1)
 			print message;
@@ -58,7 +56,6 @@ client.send('REGISTER %s' % screenName)
 
 while client.isRunning():
 	try:
-		sys.stdout.write('\x1b[0G')                         # <ESC. Move to start of line
 		command = raw_input("> ").strip()
 		client.send(command)
 		# *** process input from the user in a loop here ***
