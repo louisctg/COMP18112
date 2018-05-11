@@ -91,7 +91,7 @@ class MyServer(Server):
         elif command == 'ADCMD':
             if usersOnServer[socket.screenName]['type'] == 'admin':
                 (admincommand, sep, newparameter) = parameter.strip().partition(' ')
-                if admincommand == 'KICK':
+                if admincommand == 'BAN':
                     if newparameter in usersOnServer:
                         usersOnServer[newparameter]['allowed'] = 'no'
                     else:
